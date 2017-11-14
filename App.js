@@ -1,7 +1,7 @@
 import React from "react";
 import { StatusBar } from "react-native";
-import Home from "./src/features/home";
+import RootNavigator from "./src/navigation";
 StatusBar.setHidden(true);
 
-const App = () => <Home />;
+const App = () => <RootNavigator />;
 export default App;
