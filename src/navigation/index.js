@@ -25,3 +25,14 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
+
+export function getCurrentRouteName(navigationState) {
+  if (!navigationState) {
+    return null;
+  }
+  const route = navigationState.routes[navigationState.index];
+  if (route.routes) {
+    return getCurrentRouteName(route);
+  }
+  return route.routeName;
+}
