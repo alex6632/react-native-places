@@ -57,6 +57,10 @@
 		<string>Poppins-Italic.ttf</string>
 		<string>Poppins-Regular.ttf</string>
 		<string>Poppins-Thin.ttf</string>
+		<string>AlegreyaSansSC-Bold.ttf</string>
+		<string>AlegreyaSansSC-MediumItalic.ttf</string>
+		<string>AlegreyaSansSC-Regular.ttf</string>
+		<string>AlegreyaSansSC-Thin.ttf</string>
 	</array>
 </dict>
 </plist>

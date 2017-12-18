@@ -1,12 +1,7 @@
 import React from "react";
 import { compose } from "redux";
 import { connect } from "react-redux";
-import {
-  fetchPlaces,
-  togglePlace,
-  addPlace,
-  updateFilter
-} from "../../../redux/actions/places";
+import { fetchPlaces } from "../../../redux/actions/places";
 import Component from "../components";
 import withDidMount from "../../../shared-ui/hoc/withDidMount";
 import withLoading from "../../../shared-ui/hoc/withLoading";
@@ -17,15 +12,6 @@ function mapDispatchToProps(dispatch) {
   return {
     didMount() {
       dispatch(fetchPlaces());
-    },
-    onToggleItem: id => {
-      dispatch(togglePlace(id));
-    },
-    addItem: label => {
-      dispatch(addPlace(label));
-    },
-    updateFilter: value => {
-      dispatch(updateFilter(value));
     }
   };
 }
@@ -34,15 +20,14 @@ function mapStateToProps(state) {
   return {
     places: getVisiblePlaces(state),
     isLoading: state.places.isLoading,
-    error: state.places.error,
-    filter: state.placesFilter
+    error: state.places.error
   };
 }
 
-const PlacesContainer = compose(
+const MarkersContainer = compose(
   connect(mapStateToProps, mapDispatchToProps),
   withDidMount,
   withError,
   withLoading
 )(Component);
-export default PlacesContainer;
+export default MarkersContainer;
