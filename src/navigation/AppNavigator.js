@@ -10,6 +10,7 @@ import Home from "../features/home";
 import Places from "../features/places";
 import Around from "../features/around";
 import Friends from "../features/friends";
+import Filter from "../features/filters";
 import Swiper from "react-native-swiper";
 
 const Tabs = TabNavigator({
@@ -47,9 +48,7 @@ const Drawer = DrawerNavigator(
   {
     drawerPosition: "right",
     contentComponent: props => (
-      <View>
-        <Text {...props}>Hello Drawer</Text>
-      </View>
+      <Filter />
     )
   }
 );
