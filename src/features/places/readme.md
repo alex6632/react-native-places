@@ -27,3 +27,9 @@ Au vu de mes quelques années d'expérience dans l'intégration, je pense avoir 
 * Rendre plus lisible le code CSS
 
 _La documentation: [Styled Components](https://www.styled-components.com/docs/basics#getting-started)_
+
+
+Bilan
+------
+React NAtive Elements est une libraire qui propose beaucoup de style prédéfini intérressant à mettre en place mais trop compliqué en 30 minutes.
+Je n'ai pas eu le temps de régler les styles des boutons mais les boutons s'affichent.
